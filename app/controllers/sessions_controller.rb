@@ -1,8 +1,7 @@
 class SessionsController < ApplicationController
   
   def new
-    if session[:name]
-      redirect_to '/'
+    redirect_to '/' if session[:name]
   end 
   
   def create
